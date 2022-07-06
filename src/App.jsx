@@ -1,10 +1,12 @@
 import { useState } from 'react'
-import Layout from './components/Layout';
+import { Layout } from './components';
 
 function App() {
 
   return (
-    <Layout />
+    <Layout>
+      <h2>Test</h2>
+    </Layout>
   )
 }
 
