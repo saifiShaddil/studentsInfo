@@ -9,17 +9,17 @@ const Modal = ({ setToggle }) => {
  
   return (
     <div
-      classNameName="flex justify-center items-center fixed bg-gray-300 z-50"
-      style={{ width: width, height: height }}
+      classNameName="grid justify-center overflow-hidden relative items-center fixed bg-gray-300 z-5000"
+      style={{ width: width, height: height, zIndex: 1000, position: 'absolute', placeContent: 'center', backgroundColor: 'rgba(0,0,0,0.5)' }}
     >
       <div
         id="modal"
         tabindex="1"
         aria-hidden="true"
-        className="overflow-y-auto grid overflow-x-hidden z-50 w-full h-ful justify-center items-center"
+        className="overflow-hidden grid z-50 justify-center items-center"
       >
         <div className="h-full w-full ">
-          <div className=" max-w-md bg-white rounded-lg shadow dark:bg-gray-700">
+          <div className=" max-w-md bg-white relative rounded-lg shadow dark:bg-gray-700">
             <button
               onClick={() => setToggle(false)}
               type="button"
@@ -33,7 +33,7 @@ const Modal = ({ setToggle }) => {
                 ></path>
               </svg>
             </button>
-            <div className="py-6 px-6 lg:px-8">
+            <div className="py-6 px-6 lg:px-8" style={{ width: "400px"}}>
               <h3 className="mb-4 text-xl font-medium text-gray-900 dark:text-white">
                 Sign in to our platform
               </h3>

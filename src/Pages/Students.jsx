@@ -12,8 +12,8 @@ const Students = () => {
   return (
     <>
       {toggle && <Modal setToggle={setToggle} />}
-      <div className="container mt-10 flex justify-center mx-10 w-full">
-        <div className="flex w-full flex-col">
+      <div className="container  ml-8 mr-8 flex justify-center mx-auto h-full w-full">
+        <div className="flex w-full mt-10 flex-col">
           <div className="w-full">
             <div className="border-b border-gray-200 shadow">
               <table className="divide-y divide-gray-300 w-full relative">
