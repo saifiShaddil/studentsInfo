@@ -1,7 +1,7 @@
 import Students from "../Pages/Students"
 
 const allRoutes = [
-  { path: "/students", component: Students },
+  { path: "/", element: Students },
 ]
 
 export { allRoutes }

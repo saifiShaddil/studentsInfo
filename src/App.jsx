@@ -1,18 +1,18 @@
-import { useState } from 'react'
-import { Layout } from './components';
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Students from './Pages/Students';
-import { allRoutes } from './routes';
+import { useState } from "react"
+import { Layout } from "./components"
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom"
+import { allRoutes } from "./routes"
 
 function App() {
-
   return (
     <Layout>
       <Router>
-        {allRoutes.map(route => {
-          return <Route key={route.path} {...route} />
-        })}
-        <Route path="*" components={<Students />} />
+        <Routes>
+          {allRoutes.map((route) => {
+            return <Route key={route.path} path={route.path} element={<route.element />} />
+          })}
+          <Route path="*" element={<Navigate replace to='/' />} />
+        </Routes>
       </Router>
     </Layout>
   )
