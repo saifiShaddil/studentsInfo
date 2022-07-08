@@ -126,7 +126,7 @@ const AddStudentModal = ({ setToggle, title, id }) => {
               ></path>
             </svg>
           </button>
-          <div className="py-6 px-6 lg:px-8">
+          <div className="py-4 px-6 lg:px-8">
             <h3 className="text-xl font-semibold text-gray-600">{title}</h3>
             <form className="space-y-6 mt-4">
               <div className="mb-2">
@@ -161,7 +161,7 @@ const AddStudentModal = ({ setToggle, title, id }) => {
                 </p>
               </div>
 
-              <div>
+              <div className="mt-3">
                 <label
                   htmlFor="className"
                   className={
@@ -197,7 +197,7 @@ const AddStudentModal = ({ setToggle, title, id }) => {
                 </p>
               </div>
 
-              <div>
+              <div className="mt-3">
                 <label
                   htmlFor="score"
                   className={
@@ -231,7 +231,7 @@ const AddStudentModal = ({ setToggle, title, id }) => {
                     : "Please input values between 1 & 100"}
                 </p>
               </div>
-              <div>
+              <div className="mt-3">
                 <label
                   htmlFor="result"
                   className="block mb-1 text-sm font-semibold tracking-wider text-gray-900"
@@ -265,8 +265,8 @@ const AddStudentModal = ({ setToggle, title, id }) => {
                   {grade !== "" ? grade : "---"}
                 </button>
               </div>
-              <hr />
-              <div className="flex w-full justify-end items-center">
+              <hr  className="mt-2 mb-2"/>
+              <div className="flex w-full mt-0 justify-end items-center">
                 <button
                   type="button"
                   onClick={() => setToggle(false)}
