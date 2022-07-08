@@ -10,10 +10,10 @@ const SideBar = () => {
   const { activeLink } = state
   return (
     <aside className="w-64" aria-label="Sidebar">
-      <div className="overflow-y-auto flex flex-col py-4 shadow px-3 bg-white rounded h-screen">
+      <div className="overflow-y-hidden flex flex-col py-4 shadow px-3 bg-white rounded h-screen">
         <NavLink
           to="/"
-          className="flex items-center text-center w-full justify-center  mb-5"
+          className="flex items-center text-center w-full justify-center  mb-3"
         >
           <img
             src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
