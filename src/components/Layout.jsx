@@ -1,5 +1,5 @@
 import { useContext, useEffect } from 'react';
-import { Sidebar, Header } from '.'
+import { Sidebar } from '.'
 import { ContextOne } from '../store/reducer';
 
 
@@ -31,11 +31,10 @@ const Layout = ({children}) => {
   },[])
 
   return (
-    <div className="layout-container w-screen h-screen overflow-hidden">
-        <Header />
+    <div className="layout-container w-screen h-screen overflow-hidden flex">
         <Sidebar />
-        <main className='flex ml-60 pt-[60px] h-full overflow-y-auto relative'>
-          <div id='content' className='flex h-full w-full'>
+        <main className='flex flex-1 h-full relative'>
+          <div id='content' className='h-full w-[90%] mx-auto'>
             {children}
           </div>
         </main>

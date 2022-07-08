@@ -1,36 +1,51 @@
-import { useState } from "react"
+import { useRef } from "react"
+import { AiOutlineDelete } from "react-icons/ai"
+import { FiEdit2 } from "react-icons/fi"
 
 const StudentList = ({ updatedStudentList, deletedStudentList }) => {
-
+  const lastCol = useRef(null)
+  const showEditIcon = () => {
+    lastCol.current.classList.remove("hidden")
+    lastCol.current.classList.add("flex")
+    lastCol.current.firstChild.classList.add("text-blue-600")
+    lastCol.current.lastChild.classList.add("text-red-600")
+  }
+  const hideEditIcon = () => {
+    lastCol.current.classList.remove("flex")
+    lastCol.current.classList.add("hidden")
+    lastCol.current.firstChild.classList.remove("text-blue-600")
+    lastCol.current.lastChild.classList.remove("text-red-600")
+  }
   return (
     <>
-      <tr className="whitespace-nowrap text-center">
-        <td className="px-6 py-6 text-sm text-gray-500">1</td>
-        <td className="px-6 py-6">
+      <tr className="whitespace-nowrap text-center font-semibold tracing-wider hover:bg-gray-200" onMouseEnter={showEditIcon} onMouseLeave={hideEditIcon}>
+        <td className="px-6 py-3 text-sm text-gray-500">1</td>
+        <td className="px-6 py-3">
           <div className="text-sm  text-gray-900">Jon doe</div>
         </td>
-        <td className="px-6 py-6">
-          <div className="text-sm text-gray-500">jhondoe@example.com</div>
+        <td className="px-6 py-3">
+          <div className="text-sm text-gray-500">12th</div>
         </td>
-        <td className="px-6 py-6 text-sm text-gray-500">2021-1-12</td>
-        <td className="px-6 py-6">
-          <button
-          onClick={() => updatedStudentList("id is here")}
-            className="px-4 py-1 text-sm text-green-200 bg-green-700 rounded-full"
+        <td className="px-6 py-3 text-sm text-gray-500">
+        <button
+            className="px-4 py-1 text-xs font-semibold text-gray-100 bg-green-600 rounded-full"
           >
-            Edit
+            Pass
           </button>
         </td>
-        <td className="px-6 py-6">
-          <button
-          onClick={deletedStudentList}
-            className="px-4 py-1 text-sm text-red-200 bg-red-700 rounded-full"
-          >
-            Delete
-          </button>
+        <td className="px-6 py-3">
+          78/100
+        </td>
+        <td className="px-6 py-3 text-green-600 font-semibold">
+          Excellent
+        </td>
+        <td className="px-6 py-3 max-w-[80px] min-w-[80px] overflow-hidden" >
+          <div ref={lastCol} className="hidden justify-center ">
+            <FiEdit2 onClick={() => updatedStudentList("id is here", "update")} className="cursor-pointer" />
+            <AiOutlineDelete onClick={() => deletedStudentList("student id")} className="ml-5 cursor-pointer" />
+          </div>
         </td>
       </tr>
-    
     </>
   )
 }

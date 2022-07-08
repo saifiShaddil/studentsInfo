@@ -6,6 +6,7 @@ export let initialState = {
   count: 10,
   height: 0,
   width: 0,
+  studentsList: [],
   currentColor: "#bada55"
 };
 
