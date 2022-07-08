@@ -2,7 +2,7 @@ import Students from "../Pages/Students"
 import Courses from "../Pages/Courses"
 import Notifications from "../Pages/Notifications"
 import Classes from "../Pages/Classes"
-import Category from "../Pages/Category"
+import Category from "../Pages/LiveClasses"
 import Dashboard from "../Pages/Dashboard"
 
 // Icons

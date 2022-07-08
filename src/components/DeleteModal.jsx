@@ -1,6 +1,25 @@
-import React from "react"
+import React, { useContext, useEffect, useState } from "react"
+import { removeStudent } from "../store/actions"
+import { ContextOne } from "../store/reducer"
 
-const DeleteModal = ({ setToggle }) => {
+const DeleteModal = ({ setToggle, id }) => {
+
+  const { state, dispatch } = useContext(ContextOne)
+
+  const [ data, setData ] = useState({ name: '', className: ""})
+
+  const deleteStudentId = (e) => {
+    e.preventDefault()
+    dispatch(removeStudent(id))
+    setTimeout(()=> {
+      setToggle(false)
+    },1000)
+  }
+
+  useEffect(() =>{
+    let res = state.studentsList.filter(students => students.id === id)
+    setData({...data, name: res[0].name, className: res[0].className})
+  },[id])
   return (
     <div
       id="popup-modal"
@@ -35,11 +54,11 @@ const DeleteModal = ({ setToggle }) => {
               </h4>
               <div>
                 <h4 className="font-light">STUDENT NAME</h4>
-                <p className="text-gray-500 font-medium">Shaddil</p>
+                <p className="text-gray-500 font-medium">{data?.name}</p>
               </div>
               <div>
                 <h4 className="font-light">CLASS</h4>
-                <p className="text-gray-500 ">9th</p>
+                <p className="text-gray-500 ">{data?.className}</p>
               </div>
             </div>
             <hr className="my-1 font-semibold text-xs bg-gray-300" />
@@ -53,7 +72,7 @@ const DeleteModal = ({ setToggle }) => {
               </button>
               <button
                 type="button"
-                onClick={() => setToggle(false)}
+                onClick={(e) => deleteStudentId(e)}
                 className=" shadow text-white bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-md inline-flex items-center px-5 py-2.5 text-center mr-2"
               >
                 CONFIRM
