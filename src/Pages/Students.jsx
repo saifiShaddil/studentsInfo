@@ -36,13 +36,13 @@ const Students = () => {
       {toggle && <AddStudentModal setToggle={setToggle} title={formTitle} id={updateId} />}
       {toggleDelete && <DeleteStudentModal setToggle={setToggleDelete} id={updateId} />}
       <div className="flex flex-row mt-10">
-        <h2 className="font-medium leading-tight text-3xl mt-0 mb-2 flex-1">
+        <h2 className="font-medium leading-tight tracking-wide text-3xl mt-0 mb-2 flex-1">
           Students
         </h2>
         <button
           type="button"
           onClick={() => updatedStudentList("id", "add")}
-          className="uppercase text-white bg-[#2CA4D8] hover:bg-blue-700 transition ease-in-out focus:ring-4 focus:outline-none focus:ring-[#2CA4D8]/50 font-semibold rounded-lg text-sm px-6 py-2.5 text-center inline-flex items-center mr-2 mb-2"
+          className="uppercase text-white bg-[#2CA4D8] hover:bg-blue-700 transition ease-in-out focus:ring-4 focus:outline-none focus:ring-[#2CA4D8]/50 font-semibold rounded-lg text-sm px-7 py-3 text-center inline-flex items-center mr-2 mb-2"
         >
           <AiOutlinePlus
             className="w-4 h-4 mr-2 -ml-1 font-bolder"
@@ -60,32 +60,32 @@ const Students = () => {
               <table className="divide-y divide-gray-300 w-full relative">
                 <thead className="bg-gray-50 p-4">
                   <tr className="sticky top-0 py-3 bg-gray-200 z-10">
-                    <th className=" px-6 py-2 text-sm font-bold text-gray-500">
+                    <th className=" px-6 py-2 text-md font-bold tracking-wide text-gray-500">
                       No.
                     </th>
-                    <th className=" px-6 py-2 text-sm font-bold text-gray-500">
+                    <th className=" px-6 py-2 text-md font-bold tracking-wide text-gray-500">
                       Students Name
                     </th>
-                    <th className=" px-6 py-2 text-sm font-bold text-gray-500">
+                    <th className=" px-6 py-2 text-md font-bold tracking-wide text-gray-500">
                       Class
                     </th>
-                    <th className=" px-6 py-2 text-sm font-bold text-gray-500">
+                    <th className=" px-6 py-2 text-md font-bold tracking-wide text-gray-500">
                       Result
                     </th>
-                    <th className=" px-6 py-2 text-sm font-bold text-gray-500">
+                    <th className=" px-6 py-2 text-md font-bold tracking-wide text-gray-500">
                       Score
                     </th>
-                    <th className=" px-6 py-2 text-sm font-bold text-gray-500">
+                    <th className=" px-6 py-2 text-md font-bold tracking-wide text-gray-500">
                       Grade
                     </th>
-                    <th className=" px-6 py-2 text-sm font-bold text-gray-500"></th>
+                    <th className=" px-6 py-2 text-md font-bold tracking-wide text-gray-500"></th>
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-300">
                   {state.studentsList && state.studentsList.map((item, index) => {
                     return (
                       <StudentList key={index}
-                        index={index}
+                        index={index + 1}
                         updatedStudentList={updatedStudentList}
                         deletedStudentList={deletedStudentList}
                         item={item}
@@ -100,7 +100,7 @@ const Students = () => {
         </div>
       </div>
       <div className="flex items-end h-[50px]">
-        <p className="text-sm font-medium text-gray-600">Showing 7 out of 7</p>
+        <p className="text-sm font-medium text-gray-600">Showing {state.studentsList.length} out of {state.studentsList.length}</p>
       </div>
     </div>
   )

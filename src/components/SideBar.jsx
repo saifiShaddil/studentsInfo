@@ -11,19 +11,19 @@ const SideBar = () => {
   return (
     <aside className="w-64" aria-label="Sidebar">
       <div className="overflow-y-auto flex flex-col py-4 shadow px-3 bg-white rounded h-screen">
-        <a
-          href="https://flowbite.com/"
+        <NavLink
+          to="/"
           className="flex items-center text-center w-full justify-center  mb-5"
         >
           <img
             src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-            className="mr-3 h-16 rounded-full w-16 xs:w-8 xs:h-8"
+            className="mr-3 h-12 rounded-full w-12 xs:w-8 xs:h-8"
             alt="Flowbite Logo"
           />
-          <span className="self-center text-xl font-semibold whitespace-nowrap">
-            Flowbite
+          <span className="self-center tracking-tight text-yellow-400 text-2xl whitespace-nowrap" style={{ fontWeight: '900'}}>
+          School Space
           </span>
-        </a>
+        </NavLink>
         <hr className="my-2 font-semibold text-xs bg-gray-300" />
         <ul className="space-y-2 mt-4">
           {SidebarItems.map((item, i) => {
