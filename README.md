@@ -1,2 +1,3 @@
 ## StudentsInfo
-Web Application for  adding students details, updating oe deletion.
+1). Web Application for  adding students details, updating or deletion.
+--More Fetaures will be added soon.....
