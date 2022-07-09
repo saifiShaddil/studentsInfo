@@ -46,7 +46,7 @@ const StudentList = ({
           className={`px-6 py-3 font-semibold + ${
             item.grade === "Excellent"
               ? "text-green-600"
-              : grade === "Good"
+              : item.grade === "Good"
               ? "text-blue-600"
               : "text-red-500"
           }`}
