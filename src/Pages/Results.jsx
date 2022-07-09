@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { setActiveLink } from '../store/actions'
 import { ContextOne } from '../store/reducer'
 

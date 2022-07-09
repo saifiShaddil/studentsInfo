@@ -1,8 +1,8 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { setActiveLink } from '../store/actions'
 import { ContextOne } from '../store/reducer'
 
-const Exams = () => {
+const Exam = () => {
     const { dispatch } = useContext(ContextOne)
 
     useEffect(() => {
@@ -11,8 +11,8 @@ const Exams = () => {
 
     return (
       <div className="flex container mt-10">
-        <h2 className="font-medium leading-tight tracking-wide text-3xl">Exams</h2>
+        <h2 className="font-medium leading-tight tracking-wide text-3xl">Exam</h2>
       </div>
     )
   }
-export default Exams
+export default Exam

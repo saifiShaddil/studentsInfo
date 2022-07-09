@@ -2,7 +2,7 @@ import Students from "../Pages/Students"
 import Courses from "../Pages/Courses"
 import Notifications from "../Pages/Notifications"
 import Classes from "../Pages/Classes"
-import Category from "../Pages/LiveClasses"
+import NoticeBoard from "../Pages/NoticeBoard"
 import Dashboard from "../Pages/Dashboard"
 
 // Icons
@@ -11,14 +11,20 @@ import { GoBook } from "react-icons/go"
 import { TiGroupOutline } from "react-icons/ti"
 import { BiChalkboard, BiBell } from "react-icons/bi"
 import { MdOutlineDashboard, MdOutlineContactPage } from "react-icons/md"
+import Exam from "../Pages/Exam"
+import LiveClasses from "../Pages/LiveClasses"
+import Results from "../Pages/Results"
 
 const allRoutes = [
   { path: "/", element: Students },
   { path: "/courses", element: Courses },
   { path: "/notifications", element: Notifications },
   { path: "/classes", element: Classes },
-  { path: "/category", element: Category },
+  { path: "/exam", element: Exam },
   { path: "/dashboard", element: Dashboard },
+  { path: "/live-classes", element: LiveClasses },
+  { path: "/notice-board", element: NoticeBoard },
+  { path: "/results", element: Results },
 ]
 
 const SidebarItems = [
