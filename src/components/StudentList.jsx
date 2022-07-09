@@ -36,7 +36,7 @@ const StudentList = ({
           <div className="text-sm text-gray-500">{item.className}th</div>
         </td>
         <td className="px-6 py-3 text-sm text-gray-500">
-          <button className={`px-4 py-1 text-xs font-semibold text-gray-100rounded-full + ${item.result === "Passed" ? "bg-green-400" : "bg-red-500"}`}>
+          <button className={`px-4 py-1 text-xs font-semibold text-gray-100 rounded-full + ${item.result === "Passed" ? "bg-green-400" : "bg-red-500"}`}>
             {item.result}
           </button>
         </td>
