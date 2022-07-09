@@ -9,7 +9,9 @@ const Dashboard = () => {
     dispatch(setActiveLink("Dashboard"))
   },[])
   return (
-    <div>Dashboard</div>
+    <div className="flex container py-5">
+      <h2 className="text-3xl font-bolder text-gray-600 tracking-widest">Dashboard</h2>
+    </div>
   )
 }
 
