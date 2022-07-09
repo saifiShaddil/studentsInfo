@@ -13,7 +13,7 @@ const DeleteModal = ({ setToggle, id }) => {
     dispatch(removeStudent(id))
     setTimeout(()=> {
       setToggle(false)
-    },1000)
+    },200)
   }
 
   useEffect(() =>{
@@ -53,12 +53,12 @@ const DeleteModal = ({ setToggle, id }) => {
                 list?
               </h4>
               <div>
-                <h4 className="font-light">STUDENT NAME</h4>
-                <p className="text-gray-500 font-medium">{data?.name}</p>
+                <h4 className="font-medium text-lg text-light">STUDENT NAME</h4>
+                <p className="text-gray-500 tracking-wide text-md font-medium">{data?.name}</p>
               </div>
               <div>
-                <h4 className="font-light">CLASS</h4>
-                <p className="text-gray-500 ">{data?.className}</p>
+                <h4 className="font-medium text-light text-lg tracking-wide">CLASS</h4>
+                <p className="text-gray-500 tracking-wide text-md">{data?.className}</p>
               </div>
             </div>
             <hr className="my-1 font-semibold text-xs bg-gray-300" />

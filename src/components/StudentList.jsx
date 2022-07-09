@@ -43,7 +43,7 @@ const StudentList = ({
         <td className="px-6 py-3">{item.score}/100</td>
 
         <td
-          className={`px-6 py-3 font-semibold + ${
+          className={`px-6 py-3 font-semibold text-sm + ${
             item.grade === "Excellent"
               ? "text-green-600"
               : item.grade === "Good"

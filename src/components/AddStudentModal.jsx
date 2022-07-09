@@ -93,7 +93,9 @@ const AddStudentModal = ({ setToggle, title, id }) => {
       dispatch(addNewStudent(name, parseInt(className), grade, parseInt(score), result))
     }
     setFormData({ name: "", className: "", grade: "", score: "", result: "" })
-    setToggle(false)
+    setTimeout(() => {
+      setToggle(false)
+    }, 300)
   }
 
   useEffect(() => {
