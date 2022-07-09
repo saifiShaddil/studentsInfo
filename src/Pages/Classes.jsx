@@ -9,8 +9,8 @@ const Classes = () => {
     dispatch(setActiveLink("Classes"))
   }, [])
   return (
-    <div className="flex container py-5">
-      <h2 className="text-3xl font-bolder text-gray-600 tracking-widest">
+    <div className="flex container mt-10">
+      <h2 className="font-medium leading-tight tracking-wide text-3xl">
         Classes
       </h2>
     </div>
